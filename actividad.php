@@ -33,11 +33,11 @@
     }
 
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
-    /*if($link){
+    if($link){
         echo "ok";
     }else{
         echo 'error';
-    }*/
+    }
     /*mysqli_select_db($link, "TAREAS");
     mysqli_query($link, "SET NAMES UTF8");
     
