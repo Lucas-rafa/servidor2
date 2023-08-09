@@ -21,12 +21,12 @@
 
     function MOSTRARDATOS($resultados){
     if ($resultados != NULL) {
-    echo "nombre ".$resultados['nombre']."<br/>";
-    echo "apellido ".$resultados['apellido']."<br/>";
-    echo "telefono ".$resultados['telefono']."<br/>";
-    echo "edad ".$resultados['edad']."<br/>";
-    echo "altura ".$resultados['altura']."<br/>";
-    echo "peso ".$resultados['peso']."<br/>";
+    echo "nombre: ".$resultados['nombre']."<br/>";
+    echo "apellido: ".$resultados['apellido']."<br/>";
+    echo "telefono: ".$resultados['telefono']."<br/>";
+    echo "edad: ".$resultados['edad']."<br/>";
+    echo "altura: ".$resultados['altura']."<br/>";
+    echo "peso: ".$resultados['peso']."<br/>";
     } else {
     echo "<br/>no hay mas datos<br/>";
     }
