@@ -1,18 +1,4 @@
 <?php 
-
-    /*function MOSTRARDATOS($resultados){
-    if ($resultados != NULL) {
-    echo "nombre ".$resultados['nombre']."<br/>";
-    echo "apellido ".$resultados['apellido']."<br/>";
-    echo "telefono ".$resultados['telefono']."<br/>";
-    echo "edad ".$resultados['edad']."<br/>";
-    echo "altura ".$resultados['altura']."<br/>";
-    echo "peso ".$resultados['peso']."<br/>";
-    } else {
-    echo "<br/>no hay mas datos<br/>";
-    }
-    }
-  */ 
     $nombre = $_REQUEST['nombre'];
     $apellido = $_REQUEST['apellido'];
     $telefono = $_REQUEST['telefono'];
@@ -31,6 +17,20 @@
     echo $altura;
     echo "<br>";
     echo $peso;
+
+
+    function MOSTRARDATOS($resultados){
+    if ($resultados != NULL) {
+    echo "nombre ".$resultados['nombre']."<br/>";
+    echo "apellido ".$resultados['apellido']."<br/>";
+    echo "telefono ".$resultados['telefono']."<br/>";
+    echo "edad ".$resultados['edad']."<br/>";
+    echo "altura ".$resultados['altura']."<br/>";
+    echo "peso ".$resultados['peso']."<br/>";
+    } else {
+    echo "<br/>no hay mas datos<br/>";
+    }
+    }
 
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
     /*if($link){
