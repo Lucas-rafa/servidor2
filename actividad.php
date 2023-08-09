@@ -12,8 +12,15 @@
     echo "<br/>no hay mas datos<br/>";
     }
     }
-  */  
-    echo "hola". $_REQUEST['nombre'];
+  */ 
+    $nombre = $_REQUEST['nombre'];
+    $apellido = $_REQUEST['apellido'];
+    $telefono = $_REQUEST['telefono'];
+    $edad = $_REQUEST['edad'];
+    $altura = $_REQUEST['altura'];
+    $peso = $_REQUEST['peso'];
+
+    echo "hola ".$nombre;
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
     /*if($link){
         echo "ok";
