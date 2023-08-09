@@ -21,6 +21,14 @@
     $peso = $_REQUEST['peso'];
 
     echo "hola ".$nombre;
+    echo "<br>";
+    echo $apellido;
+    echo "<br>";
+    echo $telefono;
+    echo $edad;
+    echo $altura;
+    echo $peso;
+
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
     /*if($link){
         echo "ok";
