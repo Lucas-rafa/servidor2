@@ -13,7 +13,7 @@
     }
     }
   */  
-    echo "hola".$_REQUEST['nombre'];
+    echo "hola" .$_REQUEST['nombre'];
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
     /*if($link){
         echo "ok";
