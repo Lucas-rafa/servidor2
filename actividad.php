@@ -1,6 +1,6 @@
 <?php 
 
-/*function MOSTRARDATOS($resultados){
+    /*function MOSTRARDATOS($resultados){
     if ($resultados != NULL) {
     echo "nombre ".$resultados['nombre']."<br/>";
     echo "apellido ".$resultados['apellido']."<br/>";
@@ -13,6 +13,7 @@
     }
     }
   */  
+    echo "hola".$_REQUEST['nombre'];
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
     /*if($link){
         echo "ok";
