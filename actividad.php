@@ -25,8 +25,11 @@
     echo $apellido;
     echo "<br>";
     echo $telefono;
-    echo $edad;
+    echo "<br>";
+    echo $edad;    
+    echo "<br>";
     echo $altura;
+    echo "<br>";
     echo $peso;
 
     $link = mysqli_connect("localhost","lucas","1234","escuela") or die("error");
