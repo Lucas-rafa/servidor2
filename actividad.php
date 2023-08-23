@@ -32,7 +32,7 @@
     }
     }
 
-    $link = mysqli_connect("34.151.242.198","lucas","1234","escuela") or die("error");
+    $link = mysqli_connect("34.151.242.198","","","escuela") or die("error");
     if($link){
         echo "ok";
     }else{
