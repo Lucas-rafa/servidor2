@@ -59,5 +59,5 @@ $dbname = "escuela";
     
     mysqli_free_result($resultados);
     mysqli_close($link);*/
-
+    $link->close();
 ?>
