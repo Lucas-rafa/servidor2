@@ -43,6 +43,9 @@ $dbname = "escuela";
     if($link -> connect_error){
         die("Conexion Fallida: ". $link_error);
     }
+    else{
+        echo("Conexion exitosa");
+    }
     /*mysqli_select_db($link, "TAREAS");
     mysqli_query($link, "SET NAMES UTF8");
     
