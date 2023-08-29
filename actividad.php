@@ -1,4 +1,11 @@
 <?php 
+
+$servername = "localhost"; 
+$username = "lucas";
+$password = "1234";
+$dbname = "escuela";
+
+
     $nombre = $_REQUEST['nombre'];
     $apellido = $_REQUEST['apellido'];
     $telefono = $_REQUEST['telefono'];
@@ -19,7 +26,7 @@
     echo $peso;
 
 
-    function MOSTRARDATOS($resultados){
+  /*  function MOSTRARDATOS($resultados){
     if ($resultados != NULL) {
     echo "nombre: ".$resultados['nombre']."<br/>";
     echo "apellido: ".$resultados['apellido']."<br/>";
@@ -30,13 +37,11 @@
     } else {
     echo "<br/>no hay mas datos<br/>";
     }
-    }
+    }*/
 
-    $link = mysqli_connect("34.151.242.198","","","escuela") or die("error");
-    if($link){
-        echo "ok";
-    }else{
-        echo 'error';
+    $link = mysqli_connect($servername,$username,$password,$dbname);
+    if($link -> connect_error){
+        die("Conexion Fallida: ". $link_error);
     }
     /*mysqli_select_db($link, "TAREAS");
     mysqli_query($link, "SET NAMES UTF8");
