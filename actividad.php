@@ -1,11 +1,4 @@
 <?php 
-
-$servername = "localhost"; 
-$username = "lucas";
-$password = "1234";
-$dbname = "escuela";
-
-
     $nombre = $_REQUEST['nombre'];
     $apellido = $_REQUEST['apellido'];
     $telefono = $_REQUEST['telefono'];
@@ -38,11 +31,25 @@ $dbname = "escuela";
     echo "<br/>no hay mas datos<br/>";
     }
     }*/
-
-    $conn = new mysqli($servername,$username,$password,$dbname);
+    
+    $servername = "localhost"; 
+    $username = "lucas";
+    $password = "1234";
+    $dbname = "escuela";
+    // Crea la conexión
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Verifica la conexión
     if ($conn->connect_error) {
         die("Conexión fallida: " . $conn->connect_error);
     }
+    
+    // Ejecuta consultas, muestra datos, etc.
+    
+    // Cierra la conexión
+    $conn->close();
+    ?>
+    
 // Incluye el archivo de conexión
 include 'conexion.php';
 
