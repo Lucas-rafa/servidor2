@@ -50,12 +50,12 @@
     $conn->close();
     
 // Consulta SQL
-$sql = "SELECT nombre, edad FROM Datos";
+$sql = "SELECT $nombre, $edad FROM Datos";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo " - Nombre: " . $row["nombre"] . " - Edad: " . $row["edad"] . "<br>";
+        echo " - Nombre: " . $row["$nombre"] . " - Edad: " . $row["$edad"] . "<br>";
     }
 } else {
     echo "No se encontraron resultados.";
