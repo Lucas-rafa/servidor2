@@ -49,9 +49,6 @@
     // Cierra la conexión
     $conn->close();
     
-// Incluye el archivo de conexión
-include 'conexion.php';
-
 // Consulta SQL
 $sql = "SELECT nombre, edad FROM Datos";
 $result = $conn->query($sql);
