@@ -44,25 +44,19 @@
         die("Conexión fallida: " . $conn->connect_error);
     }
     
-    // Ejecuta consultas, muestra datos, etc.
-    
-    // Cierra la conexión
-    $conn->close();
-    
-// Consulta SQL
-$sql = "SELECT $nombre, $edad FROM Datos";
-$result = $conn->query($sql);
+    $sql = "SELECT nombre, edad FROM Datos";
+    $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo " - Nombre: " . $row["$nombre"] . " - Edad: " . $row["$edad"] . "<br>";
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo " - Nombre: " . $row["$nombre"] . " - Edad: " . $row["$edad"] . "<br>";
     }
-} else {
+    } else {
     echo "No se encontraron resultados.";
-}
-
-// Cierra la conexión
-$conn->close();
+    }
+    
+    $conn->close();
+    ?>    
 
     /*mysqli_select_db($link, "TAREAS");
     mysqli_query($link, "SET NAMES UTF8");
@@ -77,4 +71,3 @@ $conn->close();
     
     mysqli_free_result($resultados);
     mysqli_close($link);*/
-?>
