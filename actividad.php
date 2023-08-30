@@ -32,7 +32,7 @@
     }
     }*/
     
-    $servername = "localhost"; 
+    $servername = "18.231.51.10"; 
     $username = "lucas";
     $password = "1234";
     $dbname = "escuela";
