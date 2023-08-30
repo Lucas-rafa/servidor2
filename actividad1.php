@@ -30,6 +30,8 @@
             <input type="submit" value="Enviar"> 
         </form>
     </fieldset>
-
+    <?php 
+        include("actividad.php");
+    ?>
 </body>
 </html>
