@@ -27,7 +27,7 @@
             <label>Peso: </label>
             <input type="text" name="peso" width="200px">
             <br>
-            <input type="submit" value="Enviar"> 
+            <input type="submit" value="Enviar" name="enviar"> 
         </form>
     </fieldset>
     <?php 
