@@ -39,13 +39,28 @@ $dbname = "escuela";
     }
     }*/
 
-    $link = mysqli_connect($servername,$username,$password,$dbname);
-    if($link -> connect_error){
-        die("Conexion Fallida: ". $link_error);
+    $conn = new mysqli($servername,$username,$password,$dbname);
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
     }
-    else{
-        echo("Conexion exitosa");
+// Incluye el archivo de conexión
+include 'conexion.php';
+
+// Consulta SQL
+$sql = "SELECT nombre, edad FROM Datos";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo " - Nombre: " . $row["nombre"] . " - Edad: " . $row["edad"] . "<br>";
     }
+} else {
+    echo "No se encontraron resultados.";
+}
+
+// Cierra la conexión
+$conn->close();
+
     /*mysqli_select_db($link, "TAREAS");
     mysqli_query($link, "SET NAMES UTF8");
     
@@ -59,5 +74,4 @@ $dbname = "escuela";
     
     mysqli_free_result($resultados);
     mysqli_close($link);*/
-    $link->close();
 ?>
