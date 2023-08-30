@@ -48,7 +48,6 @@
     
     // Cierra la conexión
     $conn->close();
-    ?>
     
 // Incluye el archivo de conexión
 include 'conexion.php';
